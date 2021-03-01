@@ -10,7 +10,7 @@ char *mystrcat(char* s1,char* s2){
     s1[len] = s2[j];
   }
   s1[len] = '\0';
-  printf("After concatenation: ");
+  printf("Concatenation: ");
   puts(s1);
   return (char*) s1;
 }
