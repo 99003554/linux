@@ -16,7 +16,7 @@ int factorial(int x)
 int isPrime(int n)
 {
     int i, flag = 0;
-    n=2;
+    //n=2;
     for (i = 2; i <= n / 2; ++i) 
     {
         if (n % i == 0) 
@@ -64,12 +64,12 @@ int isPalindrome(int n){
     }
 }
 
-int vsum(int num, ...) 
+int vsum(int n, ...) 
 { 
     va_list valist; 
     int sum = 0, i; 
-    va_start(valist, num); 
-    for (i = 0; i < num; i++)  
+    va_start(valist, n); 
+    for (i = 0; i < n; i++)  
         sum += va_arg(valist, int);
     va_end(valist);
     return sum; 
