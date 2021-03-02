@@ -1,8 +1,5 @@
-TARGET=hall.out
-OBJS=test.o src/mystring.o src/myutils.o src/bitmask.o
-TOPDIR=${PWD}
+Build: test.c src/mystring.c src/myutils.c src/bitmask.c
+	gcc test.c src/mystring.c src/myutils.c src/bitmask.c -Iinc
 
-run:
-	gcc 
-clean:
-	rm -rf ${OBJS} ${TARGET}
+run:Build
+	./a.out

@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include "mystring.h"
-#include "bitmask.h"
-#include "myutils.h"
+
 
 //#include MAX_SIZE 100
 char *mystrcat(char* s1,char* s2){
