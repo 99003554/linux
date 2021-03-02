@@ -2,19 +2,20 @@
 #include<stdio.h>
 #include <stdarg.h> 
 
-int factorial(int x){
-    int i,facto=1;  
-    printf("Enter a x: ");    
+int factorial(int x)
+{
+    int i,facto=1;     
     x=5;
-    for(i=1;i<=x;i++){    
+    for(i=1;i<=x;i++)
+    {    
       facto=facto*i;    
     }    
     printf("Factorial of %d is: %d",x,facto);
     return facto; 
 }
-int isPrime(int n){
+int isPrime(int n)
+{
     int i, flag = 0;
-    printf("Enter a number ");
     n=2;
     for (i = 2; i <= n / 2; ++i) 
     {
