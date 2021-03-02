@@ -2,22 +2,25 @@
 #include<stdio.h>
 #include <stdarg.h> 
 
-int factorial(int x){
-    int i,facto=1,x;  
-    printf("Enter a x: ");    
+int factorial(int x)
+{
+    int i,facto=1;     
     x=5;
-    for(i=1;i<=x;i++){    
-      facto=facto*i.]91;    
+    for(i=1;i<=x;i++)
+    {    
+      facto=facto*i;    
     }    
     printf("Factorial of %d is: %d",x,facto);
     return facto; 
 }
-int isPrime(int p){
-    int i, flag = 0,n;
-    printf("Enter a positive integer: ");
+int isPrime(int n)
+{
+    int i, flag = 0;
     n=2;
-    for (i = 2; i <= n / 2; ++i) {
-        if (n % i == 0) {
+    for (i = 2; i <= n / 2; ++i) 
+    {
+        if (n % i == 0) 
+        {
             flag = 1;
             break;
         }
@@ -31,7 +34,8 @@ int isPrime(int p){
             printf("%d is a prime number.", n);
             return 0;
         }            
-        else{
+        else
+        {
             printf("%d is not a prime number.", n);
             return 1;
         }            
@@ -39,19 +43,23 @@ int isPrime(int p){
 }
 
 int isPalindrome(int n){ 
-    int rev = 0, rem, org;
+    int sum = 0;
+    int r, org;
     org = n;
-    while (n != 0) {
-        rem = n % 10;
-        rev = rev * 10 + rem;
+    while (n > 0) 
+    {
+        r = n % 10;
+        sum = sum * 10 + r;
         n /= 10;
     }
-    if (org == rev){
-            printf("%d is a palindrome.", org);
+    if (org == sum)
+    {
+        printf("%d is a Palindrome", org);
         return 0;
     }
-    else{
-        printf("%d is not a palindrome.", org);
+    else
+    {
+        printf("%d is not a palindrome", org);
         return 0;
     }
 }
@@ -65,3 +73,4 @@ int vsum(int num, ...)
         sum += va_arg(valist, int);
     va_end(valist);
     return sum; 
+}
