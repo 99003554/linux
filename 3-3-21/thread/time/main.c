@@ -4,4 +4,5 @@ int main()
 {
   /* Get the current time*/
   getTime();
+  return 0;
 }
