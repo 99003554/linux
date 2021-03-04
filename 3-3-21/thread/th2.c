@@ -1,7 +1,4 @@
-#include <pthread.h>
-#include <time.h>
-#include <stdio.h>
-#include <unistd.h>
+#include "timeth.h"
 
 void *task_body_time(void* pv)
 {
@@ -31,9 +28,4 @@ void getTime()
     pthread_join(parr[i], NULL);
   }
 }
-//Calling function
-int main()
-{
-  /* Getting the current time*/
-  getTime();
-}
+
