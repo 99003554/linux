@@ -7,7 +7,7 @@ int a[max] = { 1, 5, 7, 10, 12, 14, 15, 18, 20,
                22, 300, 220 }; 
   
 // Array to store max of threads 
-int max[Th_max] = { 0 }; 
+int max_n[Th_max] = { 0 }; 
 int no = 0; 
 // Function to find maximum 
 void maximum(void* arg) 
@@ -37,8 +37,8 @@ int main()
       // Finding max element in an array 
     // by individual threads 
     for (i = 0; i < Th_max; i++) { 
-        if (max_num[i] > maxs) 
-            maxs = max_num[i]; 
+        if (max_n[i] > maxs) 
+            maxs = max_n[i]; 
     }   
     printf("Max: %d", maxs); 
     return 0; 

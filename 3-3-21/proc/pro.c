@@ -1,5 +1,8 @@
-#include "shell.h"
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/wait.h>
+#include <unistd.h>
 #define BUFFER_LEN 1024
 
 void Mini_Shell() {
@@ -11,7 +14,7 @@ void Mini_Shell() {
 
   while (1) {
 
-    printf("SHELL "); // print shell 
+    printf("Mini SHELL "); // print shell 
 
     if (!fgets(line, BUFFER_LEN, stdin))
       break;
@@ -58,4 +61,9 @@ void Mini_Shell() {
       printf("Child exited\n");
     }
   }
+}
+int main() 
+{ 
+void Mini_Shell(); 
+return 0;
 }
