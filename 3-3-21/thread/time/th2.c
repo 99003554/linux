@@ -9,7 +9,7 @@ void *task_body_time(void* pv)
   t = time(NULL);
   /* hh : mm : ss*/
   current_time = localtime(&t);
-  printf("%02d : %02d : %02d \n",current_time->tm_hour, current_time->tm_min, current_time->tm_sec);
+  printf("To display the time %02d : %02d : %02d \n",current_time->tm_hour, current_time->tm_min, current_time->tm_sec);
 }
 void getTime()
 {
