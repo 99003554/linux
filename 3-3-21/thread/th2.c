@@ -16,7 +16,7 @@ void *task_body_time(void* pv)
 }
 void getTime()
 {
-  int i, n=12;
+  int i, n=5;
   pthread_t parr[n];
 
   for(i=0; i<n; ++i)
