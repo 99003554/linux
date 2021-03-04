@@ -12,10 +12,11 @@ int no = 0;
 // Function to find maximum 
 void maximum(void* arg) 
 { 
-    int i, num = thread_no++; 
+    int i, num ; 
     int maxs = 0; 
   
-    for (i = num * (max / 4); i < (num + 1) * (max / 4); i++) { 
+    for (i = num * (max / 4); i < (num + 1) * (max / 4); i++) 
+    { 
         if (a[i] > maxs) 
             maxs = a[i]; 
     }   
