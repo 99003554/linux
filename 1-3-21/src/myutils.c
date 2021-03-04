@@ -1,7 +1,7 @@
 #include "myutils.h"
 #include<stdio.h>
 #include <stdarg.h> 
-
+//Factorial function
 int factorial(int x)
 {
     int i,facto=1;     
@@ -13,6 +13,7 @@ int factorial(int x)
     printf("Factorial of %d is: %d",x,facto);
     return facto; 
 }
+//To check if it is prime or not
 int isPrime(int n)
 {
     int i, flag = 0;
@@ -25,23 +26,22 @@ int isPrime(int n)
             break;
         }
     }
-    if (n == 1) {
+    if (n == 1)
+    {
         printf("1 is neither prime nor composite.");
         return -1;
     }
-    else {
-        if (flag == 0){
-            printf("%d is a prime number.", n);
+    else if (flag == 0){
+            printf("%d is a prime number", n);
             return 0;
         }            
         else
         {
-            printf("%d is not a prime number.", n);
+            printf("%d is not a prime number", n);
             return 1;
         }            
-    }
-}
-
+   }
+//To check if it is a palindrome
 int isPalindrome(int n){ 
     int sum = 0;
     int r, org;
