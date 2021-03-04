@@ -5,7 +5,7 @@
 int factorial(int x)
 {
     int i,facto=1;     
-    x=5;
+    //x=5;
     for(i=1;i<=x;i++)
     {    
       facto=facto*i;    
