@@ -1,0 +1,3 @@
+UnityBegin("testrun.c");
+RUN_TEST(test_sum);
+return(UnityEnd());

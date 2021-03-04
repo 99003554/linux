@@ -8,18 +8,18 @@
 // sighup() function 
 void sighup() 
 { 
-    signal(SIGHUP, sighup); /* reset signal */
+    signal(SIGHUP, sighup); 
     printf("CHILD:SIGHUP\n"); 
 } 
 // sigint() function  
 void sigint() 
-{ 
-    signal(SIGINT, sigint); /* reset signal */
+{ 	/*Interrupt*/
+    signal(SIGINT, sigint); 
     printf("CHILD:SIGINT\n"); 
 } 
 // sigquit() function  
 void sigquit() 
-{ 
+{ 	/*Terminate*/
     printf("Child process killed\n"); 
     exit(0); 
 }  
@@ -28,26 +28,31 @@ void main()
     int pid; 
    /* get child process */
     pid = fork();
-    if (pid < 0) { 
+    if (pid < 0) 
+    { 
         perror("fork"); 
         exit(1); 
     } 
-     if (pid == 0) { /* child */
+     if (pid == 0) 
+     { /* child */
         signal(SIGHUP, sighup); 
         signal(SIGINT, sigint); 
         signal(SIGQUIT, sigquit); 
+        /* Infinity loop */
         for (;;) 
-            ; /* loop for ever */
+            ; 
     } 
      else /* parent */
-    { /* pid hold id of child */
-        printf("\nPARENT: sending SIGHUP\n\n"); 
+    { /* pid of child */
+        printf("\nPARENT:SIGHUP\n"); 
         kill(pid, SIGHUP); 
-        sleep(5); /* pause for 5 secs */
-        printf("\nPARENT: sending SIGINT\n\n"); 
+	/* sleep for 5 secs */
+	sleep(5); 
+        printf("\nPARENT: SIGINT\n"); 
         kill(pid, SIGINT); 
-        sleep(5); /* pause for 5 secs */
-        printf("\nPARENT: sending SIGQUIT\n\n"); 
+        /* sleep 5 secs */
+        sleep(5); 
+        printf("\nPARENT: SIGQUIT\n"); 
         kill(pid, SIGQUIT); 
         sleep(5); 
     } 
