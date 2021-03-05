@@ -1,7 +1,8 @@
 #include<semaphore.h>
-#include<pthread.h>
+//#include<pthread.h>
+#include "semaphore.h"
 //const int max=15;
-int m_arr[15];
+int m_arr[10];
 int m_top=-1;
 sem_t s1;
 sem_t s2;
@@ -11,7 +12,7 @@ void* push(void* pv)	//consumer
     int val=(int*)pv;
 	sem_wait(&s1);
   // pthread_mutex_lock(&m1);
-	if(m_top<=15){
+	if(m_top<=10){
         m_arr[++m_top]=val;
          printf("push val:%d\n",val);
     }
@@ -29,7 +30,7 @@ void* pop(void* pv)	//producer
 	if(m_top!=-1){
         //temp+=1;
         temp=m_arr[m_top--];
-        printf("VAlue:%d\n",temp);
+        printf("Value:%d\n",temp);
     }
    //pthread_mutex_unlock(&m1);
     sem_post(&s1);
