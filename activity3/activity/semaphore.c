@@ -48,11 +48,13 @@ int main()
 	 for(i=0;i<10;i++){ 	
          pthread_create(&pt2,NULL,pop,NULL);
      }
+	for(i=0;i<10;i++)
 	pthread_join(pt1,NULL);
+	for(i=0;i<10;i++)
 	pthread_join(pt2, NULL );
    sem_destroy(&s1);
 	sem_destroy(&s2);
    // pthread_mutex_destroy(&m1);
-	//printf("VAlue:%d",value);
-	return 0;	//exit(0);
+	//printf("Value:%d",value);
+	return 0;
 }
