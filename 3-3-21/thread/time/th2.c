@@ -15,7 +15,6 @@ void getTime()
 {
   int i, n=5;
   pthread_t parr[n];
-
   for(i=0; i<n; ++i)
   {
     /* Create a thread to get current time */

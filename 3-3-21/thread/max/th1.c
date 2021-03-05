@@ -1,11 +1,9 @@
 #include "max.h"
 //Array declaration
-int a[max] = { 11, 55, 70, 100, 110, 134, 158, 218, 220, 
-               22, 300, 229 }; 
-  
-// Array threads
+int a[max] = { 11, 55, 70, 100, 110, 134, 158, 218, 220, 22, 300, 229 }; 
+ // Array threads
 int max_n[Th_max] = { 0 }; 
-int no = 0; 
+int n = 0; 
 // Function to find maximum 
 void maximum(void* arg) 
 { 

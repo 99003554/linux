@@ -1,7 +1,7 @@
 #include<semaphore.h>
 #include<pthread.h>
 //const int max=15;
-int m_arr[20];
+int m_arr[15];
 int m_top=-1;
 sem_t s1;
 sem_t s2;

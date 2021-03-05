@@ -1,5 +1,10 @@
-  
-all.out:semaphore.c
-	gcc semaphore.c -lpthread -o a.out
-test:a.out
-	./a.out
+SRC = *.c
+INC = *.h
+all: $(SRC)
+	gcc $(SRC) $(INC) -lpthread -o c.out
+
+run:
+	./c.out
+
+clean:
+	rm -rf *.out *.o

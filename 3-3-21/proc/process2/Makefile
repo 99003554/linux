@@ -1,4 +1,9 @@
-all.out:pr2.c
-	gcc pr2.c -o all.out
-test:
-	./all.out
+SRC = *.c
+INC = *.h
+all: $(SRC)
+	gcc $(SRC) $(INC) -o a.out
+run:
+	./a.out
+clean:
+	rm -rf *.out *.o
+

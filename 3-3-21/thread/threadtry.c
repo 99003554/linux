@@ -20,7 +20,7 @@ void maximum(void* arg)
         if (a[i] > maxs) 
             maxs = a[i]; 
     }   
-    max[num] = maxs; 
+    max_n[num] = maxs; 
 } 
 // Main function
 int main() 

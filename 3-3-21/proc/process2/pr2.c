@@ -2,6 +2,6 @@
 
 int main()
 {
-	process();
+	pro1();
 	return 0;
 }
