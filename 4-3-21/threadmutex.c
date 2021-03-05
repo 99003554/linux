@@ -12,7 +12,7 @@ void* task_body1(void* pv)
         pthread_mutex_lock(&m1);
 	        val++;
         pthread_mutex_unlock(&m1);
-        pthread_mutex_destroy(&m1);
+       
     }
 }
 void* task_body2(void* pv)
@@ -25,7 +25,7 @@ void* task_body2(void* pv)
         pthread_mutex_lock(&m1);
             val--;
         pthread_mutex_unlock(&m1);
-        pthread_mutex_destroy(&m1);
+        //pthread_mutex_destroy(&m1);
     } 
 } 
    int main()
@@ -35,6 +35,7 @@ void* task_body2(void* pv)
 	pthread_create(&pt2,NULL,task_body2,NULL);
     pthread_join(pt1,NULL);
 	pthread_join(pt2,NULL);
+     pthread_mutex_destroy(&m1);
     printf("%d",val);
     return 0;
    }
