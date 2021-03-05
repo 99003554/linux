@@ -14,8 +14,8 @@ int main()
     }
     if(ret==0)
     {
-    execlp("./new",NULL);
-      for (int i = 0; i < 5; i++)
+        execlp("./new",NULL);
+        for (int i = 0; i < 5; i++)
       {
         printf("Child__PID = %d_____PPID = %d\n",getpid(),getppid());
         sleep(1);
