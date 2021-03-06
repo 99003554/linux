@@ -1,5 +1,5 @@
-#ifndef STACKSEMAPHORE_H
-#define STACKSEMAPHORE_H
+#ifndef STACKSEMA_H
+#define STACKSEMA_H
 
 #include<pthread.h>
 #include<stdio.h>

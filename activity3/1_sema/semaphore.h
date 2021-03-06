@@ -4,6 +4,6 @@
 #include<pthread.h>
 #include<stdio.h>
 #include<semaphore.h>
-void* push(void* pv);
-void* pop(void* pv);
+void* consumer(void* arg);
+void* producer(void* arg);
 #endif
