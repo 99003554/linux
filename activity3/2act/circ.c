@@ -1,10 +1,4 @@
-#include <pthread.h>
-#include <semaphore.h>
-#include <stdlib.h>
-#include <stdio.h>
-//max value and buf size
-#define maxit 5 
-#define bufsiz 5 
+#include"circ.h"
 sem_t st;
 sem_t stp;
 int in = 0;
@@ -42,11 +36,14 @@ void *consumer(void *con)
         sem_post(&st);
     }
 }
+
+ 
 int main()
-{   
+{   //creating a thread
     pthread_t prod[5],cons[5];
     sem_init(&st,0,bufsiz);
     sem_init(&stp,0,0);
+
     int a[5] = {1,2,3,4,6}; 
     for(int i = 0; i < 5; i++) {
         pthread_create(&prod[i], NULL, (void *)producer, (void *)&a[i]);

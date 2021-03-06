@@ -1,8 +1,8 @@
-SRC = *.c
-#INC = *.h
-all: $(SRC)
-	gcc $(SRC) $(INC) -lpthtread -o a.out
-run:
-	./a.out
+src = circ.c 
+project = target
+target: $(src)
+	gcc $^ -lpthread -o $@
+run: $(project)
+	./$^
 clean:
-	rm -rf *.out *.o
+	rm *.out
